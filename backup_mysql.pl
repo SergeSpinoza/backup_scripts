@@ -41,7 +41,7 @@ $file_num = 10;
 
 # Mail settings
 # For Yandex or Gmail with SSL
-#$email_to = 'admin@znak-corp.ru';
+#$email_to = 'admin@somedomain.com';
 #$from = '.......@yandex.ru';
 #$smtp_server = 'smtp.yandex.ru';
 #$smtp_login = 'yandex_login';
