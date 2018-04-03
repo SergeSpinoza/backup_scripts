@@ -24,7 +24,7 @@ $server_name = "Server Name";
 $archive_name = "$date.tar";
 
 # Temp dir for temporary backup files
-$pwd = "/home/_backup/";
+$pwd = "/home/_backup";
 if (! -d $pwd ) {
         system "mkdir $pwd";
 }
@@ -84,8 +84,8 @@ sub send_email {
 
 # Создаем катаклог, в качестве имени - текущяя дата и задаем переменную с путем
 # Create a directory, use the current date as the name, and specify a variable with path
-system "mkdir $pwd'$date'";
-$dir_name = "$pwd'$date'";
+system "mkdir $pwd/'$date'";
+$dir_name = "$pwd/'$date'";
 
 # Делаем дамп каждой базы данных
 # Dump each DB

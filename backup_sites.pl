@@ -16,7 +16,7 @@ $server_name = "Server Name";
 $archive_name = "$date.tar";
 
 # Temp dir for temporary backup files
-$pwd = "/home/_backup/";
+$pwd = "/home/_backup";
 if (! -d $pwd ) {
         system "mkdir $pwd";
 }
@@ -26,7 +26,7 @@ $ftp_ip = "127.0.0.1";
 $ftp_port = "21";
 $ftp_login = "user1";
 $ftp_pass = "UserPasswordt";
-$ftp_dir = "data/daily";  # FTP path (without a slash at the end and the beginning)х
+$ftp_dir = "data/daily";  # FTP path (without a slash at the end and the beginning)
 
 # Stored amount of backups on the FTP server
 $file_num = 10;
@@ -76,8 +76,8 @@ sub send_email {
 
 # Создаем катаклог, в качестве имени - текущяя дата и задаем переменную с путем
 # Create a directory, use the current date as the name, and specify a variable with path
-system "mkdir $pwd'$date'";
-$dir_name = "$pwd'$date'";
+system "mkdir $pwd/'$date'";
+$dir_name = "$pwd/'$date'";
 
 # Архивируем и перемещаем в папку, которую до этого создали, для архивации каталога необходимо поставить индекс -r
 # Пример:  system "cp -r /netup/utm5/bin $dir_name";
